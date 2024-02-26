@@ -28,26 +28,23 @@ header {
 }
 
 #header-container {
-  width: 80%;
+  width: 90%;
 }
 
 #title-container {
-  width: fit-content;
-  margin: 2em 0 0 0;
-  padding: 2em;
-  background-color: aliceblue;
-  border-radius: 10px;
+  margin: 1.5em 0 0 0;
+  color: white;
 }
 
 #page-title {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 200;
   margin: 0 0 0 0;
 }
 
 #page-subtitle {
-  font-size: 1.2em;
-  font-weight: 200;
+  font-size: 1em;
+  font-weight: 300;
   margin: 0 0 0 0;
 }
 
@@ -100,39 +97,39 @@ header {
 }
 
 #capricorn-star-1 {
-  top: 40%;
+  top: 30%;
   left: 0;
 }
 #capricorn-star-2 {
-  top: 41%;
+  top: 31%;
   left: 14%;
 }
 #capricorn-star-3 {
-  top: 40%;
+  top: 30%;
   left: 32%;
 }
 #capricorn-star-4 {
-  top: 38%;
+  top: 28%;
   left: 52%;
 }
 #capricorn-star-5 {
-  top: 30%;
+  top: 20%;
   left: 92%;
 }
 #capricorn-star-6 {
-  top: 19%;
+  top: 9%;
   left: 98.5%;
 }
 #capricorn-star-7 {
-  top: 50%;
+  top: 40%;
   left: 86%;
 }
 #capricorn-star-8 {
-  top: 60%;
+  top: 50%;
   left: 82%;
 }
 #capricorn-star-9 {
-  top: 55%;
+  top: 45%;
   left: 32%;
 }
 
@@ -184,7 +181,7 @@ header {
 }
 
 .section-container {
-  width: 70%;
+  width: 90%;
 }
 
 #projects-section {
@@ -225,5 +222,28 @@ header {
   100% {
     transform: translate(300px, 600px) rotate(360deg);
     opacity: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #page-title {
+    font-size: 3em;
+    font-weight: 200;
+    margin: 0 0 0 0;
+  }
+
+  #page-subtitle {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0 0 0 0;
+  }
+}
+
+@media screen and (min-width: 2600px) {
+  #header-container {
+    width: 60%;
+  }
+  .section-container {
+    width: 60%;
   }
 }
