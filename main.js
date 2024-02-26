@@ -1,3 +1,5 @@
+let timer = 300;
+
 const generateSmallStars = (count) => {
   let starsContainer = document.querySelector("body");
   for (let i = 0; i < count; i++) {
@@ -31,7 +33,7 @@ const createFallingStar = () => {
     Math.random() * (window.innerHeight * 0.9) + window.innerHeight * 0.1;
 
   //Randomize duration
-  const duration = Math.random() * 2 + 1;
+  const duration = Math.random() * 1 + 0.8;
 
   fallingStar.style.left = `${x}px`;
   fallingStar.style.top = `${y}px`;
@@ -46,10 +48,21 @@ const createFallingStar = () => {
   });
 };
 
+const animateFallingStar = () => {
+  if (timer % 500 === 0) {
+    createFallingStar();
+    timer = 1;
+  } else {
+    timer++;
+  }
+
+  requestAnimationFrame(animateFallingStar);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const numberOfStars = window.innerWidth / 5;
   generateSmallStars(numberOfStars);
-  setInterval(createFallingStar, Math.random() * 3000 + 1000);
+  animateFallingStar();
 });
 
 document.addEventListener("resize", () => {
