@@ -1,7 +1,7 @@
 let timer = 300;
 
 const generateSmallStars = (count) => {
-  let starsContainer = document.querySelector("body");
+  let starsContainer = document.querySelector("main");
   for (let i = 0; i < count; i++) {
     let star = document.createElement("div");
     star.className = "small-star"; // Ensure this class has your base star styling
@@ -22,7 +22,7 @@ const generateSmallStars = (count) => {
 };
 
 const createFallingStar = () => {
-  let starsContainer = document.querySelector("body");
+  let starsContainer = document.querySelector("main");
 
   const fallingStar = document.createElement("div");
   fallingStar.classList.add("falling-star");
@@ -60,12 +60,12 @@ const animateFallingStar = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const numberOfStars = window.innerWidth / 5;
+  const numberOfStars = window.innerWidth / 6;
   generateSmallStars(numberOfStars);
   animateFallingStar();
 });
 
 document.addEventListener("resize", () => {
-  const numberOfStars = window.innerWidth / 5;
+  const numberOfStars = window.innerWidth / 6;
   generateSmallStars(numberOfStars);
 });
