@@ -147,12 +147,13 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 25px;
+  gap: 20px;
 }
 
 .project {
   flex: 1 1 48%;
   max-width: 100%;
+  min-width: 280px;
   aspect-ratio: 16/9;
   background-color: #373434;
   border-radius: 5px;
@@ -272,6 +273,36 @@ header {
     max-width: 700px;
   }
   .section-inner-container {
-    padding: 80px 25%;
+    padding: 80px 20%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .section-inner-container {
+    padding: 80px 22%;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .section-inner-container {
+    padding: 80px 24%;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .section-inner-container {
+    padding: 80px 26%;
+  }
+}
+
+@media screen and (min-width: 2800px) {
+  .section-inner-container {
+    padding: 80px 28%;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .section-inner-container {
+    padding: 80px 30%;
   }
 }
