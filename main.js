@@ -1,4 +1,4 @@
-let timer = 300;
+let timer = 200;
 
 const generateSmallStars = (count) => {
   let starsContainer = document.querySelector("main");
@@ -49,7 +49,7 @@ const createFallingStar = () => {
 };
 
 const animateFallingStar = () => {
-  if (timer % 500 === 0) {
+  if (timer % 400 === 0) {
     createFallingStar();
     timer = 1;
   } else {
