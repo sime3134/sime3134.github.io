@@ -69,3 +69,20 @@ document.addEventListener("resize", () => {
   const numberOfStars = window.innerWidth / 6;
   generateSmallStars(numberOfStars);
 });
+
+const toggleMenu = () => {
+  let header = document.querySelector("header");
+  header.style.display == "none" ? displayMenu(header) : closeMenu(header);
+};
+
+const displayMenu = (menuObj) => {
+  menuObj.style.display = "block";
+  menuObj.style.animation = "slideInFromLeft 1s ease forwards";
+};
+
+const closeMenu = (menuObj) => {
+  menuObj.style.animation = "slideOutToLeft 1s ease forwards";
+  setTimeout(() => {
+    menuObj.style.display = "none";
+  }, 1000);
+};
