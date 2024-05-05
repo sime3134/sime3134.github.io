@@ -303,7 +303,7 @@ a:hover {
 }
 
 .media-wrapper {
-  min-width: 280px;
+  min-width: 260px;
 }
 
 main {
@@ -415,7 +415,7 @@ main {
 
 .project {
   width: 29%;
-  min-width: 270px;
+  min-width: 260px;
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -534,6 +534,12 @@ nav ul li {
 nav ul li:hover {
   color: #717577;
   text-decoration: underline;
+}
+
+@media screen and (min-width: 540px) {
+  .project {
+    min-width: 350px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
