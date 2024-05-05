@@ -1,170 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal Portfolio of Simon Jern" />
-    <meta
-      name="keywords"
-      content="Simon Jern, Portfolio, Web Developer, Software Developer, System Developer, Java Developer, C# Developer, Kotlin Developer"
-    />
-    <meta name="author" content="Simon Jern" />
     <title>Simon Jern</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Portfolio of Simon Jern" />
+    <meta
+      name="keywords"
+      content="Simon Jern, portfolio, programmer, programming, developer, software, java, web developer"
+    />
+    <meta name="author" content="Simon Jern" />
   </head>
   <body>
-    <button id="menu-button" onclick="toggleMenu()">
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-    </button>
-    <header style="display: none">
-      <div id="header-title-container">
-        <h1 id="page-title">Simon Jern</h1>
-        <h2 id="page-subtitle">Software Developer</h2>
-      </div>
-    </header>
-    <main>
-      <div id="sections-container">
-        <section id="home-section">
-          <div id="home-section-text-container">
-            <h2 class="section-title">
-              Hi there, I'm
-              <span class="fat-text">Simon Jern</span>, a
-              <span class="fat-text">Software Developer</span>. This is my
-              <span class="fat-text">Portfolio</span>.
-            </h2>
-          </div>
-        </section>
-        <section class="sections" id="projects-section">
-          <div class="section-inner-container">
-            <h2 class="section-title">Projects</h2>
-            <div id="project-container">
-              <div class="project">
-                <img
-                  class="project-media"
-                  src="media/root_access2.png"
-                ></img>
-                <div class="project-details">
-                  <h3 class="project-title">Certificate Generator</h3>
-                  <p class="project-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                </div>
-              </div>
-              <div class="project">
-                <video
-                  class="project-media"
-                  src="media/cert_video.mp4"
-                  playsinline
-                  loop
-                  autoplay
-                  muted
-                ></video>
-                <div class="project-details">
-                  <h3 class="project-title">Certificate Generator</h3>
-                  <p class="project-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  </p>
-                </div>
-              </div>
+    <div class="outer-container">
+      <div class="container">
+        <main>
+          <section class="page" id="start-page">
+            <div class="title-container">
+              <h1 class="title">simon jern</h1>
+              <h2 class="subtitle">SOFTWARE DEVELOPER</h2>
             </div>
-          </div>
-        </section>
-        <section class="sections" id="education-section">
-          <div class="section-inner-container">
-            <h2 class="section-title">Education</h2>
-            <p class="description-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </section>
+          <section class="page" id="about-page">
+            <div class="title-container">
+              <h3 class="title">about</h3>
+            </div>
+            <p>
+              Hi! I'm a <span class="strong">full-stack developer</span> with a
+              passion for clean and efficient code. I'm always looking for new
+              challenges and have tried my hand at a
+              <span class="strong"
+                >wide range of programming languages and technologies</span
+              >. When I'm not programming, I enjoy spending time with my family
+              and dogs, playing video games, and outdoors. I'm always looking to
+              learn new things and improve my skills, so don't hesitate to
+              <span class="strong">reach out</span> if you have any interesting
+              projects or opportunities.
             </p>
-          </div>
-        </section>
-        <section class="sections" id="skills-section">
-          <div class="section-inner-container">
-            <h2 class="section-title">Skills</h2>
-            <p class="description-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h4>Education</h4>
+            <p>
+              I have a bachelor's degree in
+              <span class="strong">computer science</span> from the university
+              of Malmö. I built several projects during my years there and one
+              of them was published by the university. Before that I studied
+              <span class="strong">game development</span> in high school.
             </p>
-          </div>
-        </section>
-        <section class="sections" id="aboutme-section">
-          <h2 class="section-title">About me</h2>
-          <p class="description-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
-        <section class="sections" id="contact-section">
-          <h2 class="section-title">Contact</h2>
-          <p class="description-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
+            <h4>Experience</h4>
+            <p>
+              I currently work at <span class="strong">Netcompany</span> in
+              Copenhagen, Denmark where I build
+              <span class="strong">full-stack applications</span>. Before my
+              move to IT, I worked as a
+              <span class="strong">Training Manager</span> at a franchise where
+              I hired, trained and developed staff members. I was also
+              responsible for the
+              <span class="strong">best-selling unit</span> in the franchise
+              where I
+              <span class="strong">significantly lowered the waiting time</span>
+              for the customers.
+            </p>
+            <h4>Skills</h4>
+            <ul class="list">
+              <li>Java</li>
+              <li>Python</li>
+              <li>C#</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>MongoDB</li>
+              <li>SQL</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Next.js</li>
+              <li>REST</li>
+              <li>Git</li>
+              <li>Docker</li>
+            </ul>
+            <h4>Languages</h4>
+            <ul class="flex">
+              <li>Swedish</li>
+              <li>English</li>
+              <li>Japanese</li>
+            </ul>
+          </section>
+          <section class="page" id="projects-page">
+            <div class="title-container">
+              <h3 class="title">projects</h3>
+            </div>
+            <div class="projects"></div>
+          </section>
+          <section class="page" id="contact-page">
+            <div class="title-container">
+              <h3 class="title">contact</h3>
+            </div>
+            <p>
+              You can contact me at
+              <a href="mailto:simonnjern@gmail.com">simonnjern@gmail.com</a>
+            </p>
+          </section>
+        </main>
+        <nav>
+          <ul>
+            <li id="about-button">about</li>
+            <li id="projects-button">projects</li>
+            <li id="contact-button">contact</li>
+          </ul>
+        </nav>
       </div>
-    </main>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h2 class="modal-title"></h2>
+        <div class="modal-innercontent">
+          <div class="media-wrapper">
+            <img class="modal-image" />
+            <video
+              class="project-media modal-video"
+              src="media/cert_video.mp4"
+              muted
+              controls
+            ></video>
+          </div>
+          <div class="modal-details">
+            <div class="modal-tech">
+              <div class="chip">Java</div>
+            </div>
+            <p>
+              Link:
+              <a class="modal-link" target="_blank" rel="noopener"></a>
+            </p>
+            <p class="modal-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>

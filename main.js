@@ -1,88 +1,220 @@
-let timer = 200;
+const projects = [
+  {
+    id: 0,
+    title: "ExLect",
+    description: `In a team of 4 system developers and 1 information architect we
+    developed this web app ordered by Malmö University. The university
+    lacked a systematical way for students to find and join external
+    lectures (guest lectures) and because of this the number of
+    visitors were low. It was also difficult for the staff to manage
+    the lectures as mails had to be sent forth and back. The result
+    was this web app where students and staff at Malmö University can
+    login to find and manage external lectures. To attract students,
+    certificates are generated for participated lectures. The web app
+    was developed with Next.js, Material UI, MongoDB and Docker.`,
+    resource: "media/cert_video.mp4",
+    video: true,
+    link: "https://exlect.se",
+    tech: ["Next.js", "Material UI", "MongoDB", "Docker"],
+  },
+  {
+    id: 1,
+    title: "Multi-Target Pathfinding: Evaluating A-star Versus BFS",
+    description: `This project was developed during my bachelor thesis at Malmö University. The aim was to compare the performance of the Breadth-First Search (BFS) algorithm and the A* algorithm in multi-target pathfinding. A simulation framework was developed in Java providing controlled simulation of the algorithms. The results showed that the BFS algorithm was faster than the A* algorithm in most multi-target cases, with the exition of very large grids.`,
+    resource: "media/thesis_video.mp4",
+    video: true,
+    link: "https://github.com/sime3134/pathfinding_simulation",
+    tech: ["Java"],
+  },
+  {
+    id: 2,
+    title: "Where did I put that?",
+    description: `I developed this Android application during a course at Umeå University. The app is designed to help the user remember where they put their belongings. The user can add several addresses, rooms, storage units and posessions to the app to later find them using the search function or browing through all locations.`,
+    resource: "media/where.mp4",
+    video: true,
+    link: "https://github.com/sime3134/WhereDidIPutThat",
+    tech: ["Kotlin", "Android"],
+  },
+  {
+    id: 3,
+    title: "g-calendar-fetcher",
+    description: `A simple JavaScript library designed to simplify the process of fetching, parsing, and displaying events from Google Calendar ical URLS.`,
+    resource: "media/calendarfetcher.png",
+    video: false,
+    link: "https://github.com/sime3134/g-calendar-fetcher",
+    tech: ["JavaScript"],
+  },
+  {
+    id: 4,
+    title: "Southern Gospel Boys Website",
+    description: `Website developed for the Southern Gospel Boys band. The website is built with plain HTML, CSS and Javascript. On this website I use my g-calendar-fetcher javascript library to display the bands upcoming events. This lets the band easily update their events in Google Calendar and have them automatically displayed on the website without other expensive services.`,
+    resource: "media/sgb.png",
+    video: false,
+    link: "https://southerngospelboys.se",
+    tech: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 5,
+    title: "root_access",
+    description: `a multiplayer game crafted by a team of 5 during a 48-hour Global Game Jam. Comprising 2 developers, 2 artists, and a sound designer, we designed it from scratch in Java to run on a local network, supporting two players. In this game, participants aim to hack into a villain's computer through collaborative efforts to deduce the correct password. The twist? Each player sees only half the password on their screen. Without peeking at each other's displays, they must verbally share their half to piece together the full password before time expires. Success leads to progressively harder levels, enhancing the challenge.`,
+    resource: "media/root_video.mp4",
+    video: true,
+    link: "https://github.com/sime3134/rootaccess_game",
+    tech: ["Java"],
+  },
+  {
+    id: 6,
+    title: "Puzzle Quest",
+    description: `Game developed from scratch in Java for a university project. This was a fun project where we challenged ourselves by building the game completely from scratch in Java instead of using a game engine like Unity or similar. On top of the actual game we also developed an editor for the game maps to use in the game. My biggest achievement was the pathfinding system where I used A* with object pooling and threading to let the NPC traverse the game map.`,
+    resource: "media/puzzle_video.mp4",
+    video: true,
+    link: "https://github.com/sime3134/PuzzleQuest",
+    tech: ["Java"],
+  },
+];
 
-const generateSmallStars = (count) => {
-  let starsContainer = document.querySelector("main");
-  for (let i = 0; i < count; i++) {
-    let star = document.createElement("div");
-    star.className = "small-star"; // Ensure this class has your base star styling
-    let x = Math.random() * window.innerWidth;
-    let y = Math.random() * window.innerHeight;
-    let size = Math.random() * 3;
-    let delay = Math.random() * 3 + 1; // Random delay between 0 to 2 seconds
+const togglePage = (pageName, flex, replace) => {
+  const startPage = document.getElementById("start-page");
+  const aboutPage = document.getElementById("about-page");
+  const contactPage = document.getElementById("contact-page");
+  const projectsPage = document.getElementById("projects-page");
+  const pageElement = document.getElementById(`${pageName}-page`);
+  const aboutButton = document.getElementById("about-button");
+  const contactButton = document.getElementById("contact-button");
+  const projectsButton = document.getElementById("projects-button");
+  const pageButton = document.getElementById(`${pageName}-button`);
+  startPage.style.display = "none";
+  aboutPage.style.display = "none";
+  contactPage.style.display = "none";
+  projectsPage.style.display = "none";
+  pageElement.style.display = flex ? "flex" : "block";
+  replace
+    ? history.replaceState({ page: pageName }, pageName, `?${pageName}`)
+    : history.pushState({ page: pageName }, pageName, `?${pageName}`);
+  aboutButton.classList.remove("active");
+  contactButton.classList.remove("active");
+  projectsButton.classList.remove("active");
+  pageName !== "start" ? pageButton.classList.add("active") : null;
+};
 
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.left = `${x}px`;
-    star.style.top = `${y}px`;
-    star.style.animation = `3s twinkle ${delay}s infinite`;
-    star.className = "small-star";
+window.addEventListener("popstate", function (event) {
+  if (event.state) {
+    if (event.state.page === "about") {
+      togglePage("about", false, false);
+    } else if (event.state.page === "contact") {
+      togglePage("contact", true, false);
+    } else if (event.state.page === "projects") {
+      togglePage("projects", true, false);
+    } else {
+      togglePage("start", true, false);
+    }
+  }
+});
 
-    starsContainer.appendChild(star);
+const displayModal = (projectId) => {
+  console.log(projectId);
+  const modal = document.getElementsByClassName("modal")[0];
+  const project = projects.find((project) => project.id === projectId);
+  const modalImage = document.getElementsByClassName("modal-image")[0];
+  const modalVideo = document.getElementsByClassName("modal-video")[0];
+  const modalTitle = document.getElementsByClassName("modal-title")[0];
+  const modalDescription = document.getElementsByClassName("modal-text")[0];
+  const modalLink = document.getElementsByClassName("modal-link")[0];
+
+  modalImage.src = !project.video ? project.resource : "";
+  modalVideo.src = project.video ? project.resource : "";
+  modalTitle.textContent = project.title;
+  modalDescription.textContent = project.description;
+  modalLink.href = project.link;
+  modalLink.textContent = project.link;
+
+  modal.style.display = "block";
+};
+
+const addProjects = () => {
+  const projectContainer = document.getElementsByClassName("projects")[0];
+
+  for (let project of projects) {
+    const projectElement = document.createElement("article");
+    projectElement.classList.add("project");
+
+    const projectMedia = project.video
+      ? document.createElement("video")
+      : document.createElement("img");
+    projectMedia.classList.add("project-media");
+    projectMedia.innerHTML = project.video
+      ? "Your browser does not support the video tag."
+      : "";
+
+    const projectTitle = document.createElement("h5");
+    projectTitle.textContent = project.title;
+    projectTitle.classList.add("project-title");
+
+    projectMedia.src = project.resource;
+    projectMedia.alt = project.title + " media";
+    if (project.video) {
+      projectMedia.loop = true;
+      projectMedia.muted = true;
+      projectMedia.autoplay = true;
+      projectMedia.playsInline = true;
+    }
+    projectElement.addEventListener("click", () => {
+      displayModal(project.id);
+    });
+
+    projectElement.appendChild(projectMedia);
+    projectElement.appendChild(projectTitle);
+    projectContainer.appendChild(projectElement);
   }
 };
 
-const createFallingStar = () => {
-  let starsContainer = document.querySelector("main");
+window.onload = () => {
+  const aboutButton = document.getElementById("about-button");
+  const contactButton = document.getElementById("contact-button");
+  const projectsButton = document.getElementById("projects-button");
+  const modal = document.getElementsByClassName("modal")[0];
+  const modalClose = document.getElementsByClassName("modal-close")[0];
 
-  const fallingStar = document.createElement("div");
-  fallingStar.classList.add("falling-star");
+  addProjects();
 
-  //Randomize starting position
-  const x = Math.random() * window.innerWidth;
-  const y =
-    Math.random() * (window.innerHeight * 0.9) + window.innerHeight * 0.1;
-
-  //Randomize duration
-  const duration = Math.random() * 1 + 0.8;
-
-  fallingStar.style.left = `${x}px`;
-  fallingStar.style.top = `${y}px`;
-
-  fallingStar.style.animation = `falling-star ${duration}s linear forwards`;
-
-  starsContainer.appendChild(fallingStar);
-
-  //Remove the star from the DOM once it's done animating
-  fallingStar.addEventListener("animationend", () => {
-    fallingStar.remove();
-  });
-};
-
-const animateFallingStar = () => {
-  if (timer % 400 === 0) {
-    createFallingStar();
-    timer = 1;
+  if (window.location.href.includes("?about")) {
+    togglePage("about", false, true);
+  } else if (window.location.href.includes("?contact")) {
+    togglePage("contact", true, true);
+  } else if (window.location.href.includes("?projects")) {
+    togglePage("projects", true, true);
   } else {
-    timer++;
+    togglePage("start", true, true);
   }
 
-  requestAnimationFrame(animateFallingStar);
-};
+  aboutButton.addEventListener("click", () => {
+    togglePage("about", false, false);
+  });
+  contactButton.addEventListener("click", () => {
+    togglePage("contact", true, false);
+  });
+  projectsButton.addEventListener("click", () => {
+    togglePage("projects", true, false);
+  });
+  modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const numberOfStars = window.innerWidth / 6;
-  generateSmallStars(numberOfStars);
-  animateFallingStar();
-});
-
-document.addEventListener("resize", () => {
-  const numberOfStars = window.innerWidth / 6;
-  generateSmallStars(numberOfStars);
-});
-
-const toggleMenu = () => {
-  let header = document.querySelector("header");
-  header.style.display == "none" ? displayMenu(header) : closeMenu(header);
-};
-
-const displayMenu = (menuObj) => {
-  menuObj.style.display = "block";
-  menuObj.style.animation = "slideInFromLeft 1s ease forwards";
-};
-
-const closeMenu = (menuObj) => {
-  menuObj.style.animation = "slideOutToLeft 1s ease forwards";
-  setTimeout(() => {
-    menuObj.style.display = "none";
-  }, 1000);
+  document.addEventListener("fullscreenchange", function () {
+    const videos = document.getElementsByTagName("video");
+    for (let video of videos) {
+      if (document.fullscreenElement) {
+        // When in fullscreen
+        video.style.objectFit = "contain"; // Ensure the whole video is visible
+      } else {
+        // When exiting fullscreen
+        video.style.objectFit = "cover"; // Go back to covering the container area
+      }
+    }
+  });
 };
