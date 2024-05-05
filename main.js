@@ -2,19 +2,11 @@ const projects = [
   {
     id: 0,
     title: "ExLect",
-    description: `In a team of 4 system developers and 1 information architect we
-    developed this web app ordered by Malmö University. The university
-    lacked a systematical way for students to find and join external
-    lectures (guest lectures) and because of this the number of
-    visitors were low. It was also difficult for the staff to manage
-    the lectures as mails had to be sent forth and back. The result
-    was this web app where students and staff at Malmö University can
-    login to find and manage external lectures. To attract students,
-    certificates are generated for participated lectures. The web app
-    was developed with Next.js, Material UI, MongoDB and Docker.`,
+    description: `In a team of 4 system developers and 1 information architect we developed this web app ordered by Malmö University. The university lacked a systematical way for students to find and join external lectures (guest lectures) and because of this the number of visitors were low. It was also difficult for the staff to manage the lectures as mails had to be sent forth and back. The result was this web app where students and staff at Malmö University can login to find and manage external lectures. To attract students, certificates are generated for participated lectures. `,
     resource: "media/cert_video.mp4",
     video: true,
-    link: "https://exlect.se",
+    linkComingSoon: true,
+    link: "https://exlect.mau.se",
     tech: ["Next.js", "Material UI", "MongoDB", "Docker"],
   },
   {
@@ -74,6 +66,8 @@ const projects = [
 ];
 
 const togglePage = (pageName, flex, replace) => {
+  window.scrollTo(0, 0);
+
   const startPage = document.getElementById("start-page");
   const aboutPage = document.getElementById("about-page");
   const contactPage = document.getElementById("contact-page");
@@ -95,7 +89,7 @@ const togglePage = (pageName, flex, replace) => {
   contactPage.style.display = "none";
   projectsPage.style.display = "none";
   pageElement.style.display = flex ? "flex" : "block";
-  innerContainer.style.minHeight = pageName === "start" ? "90vh" : "20vh";
+  innerContainer.style.minHeight = pageName === "start" ? "70vh" : "20vh";
   replace
     ? history.replaceState({ page: pageName }, pageName, `?${pageName}`)
     : history.pushState({ page: pageName }, pageName, `?${pageName}`);
@@ -150,8 +144,12 @@ const displayModal = (projectId) => {
   }
   modalTitle.textContent = project.title;
   modalDescription.textContent = project.description;
-  modalLink.href = project.link;
-  modalLink.textContent = project.link;
+  if (project.linkComingSoon) {
+    modalLink.textContent = "Link coming soon...";
+  } else {
+    modalLink.href = project.link;
+    modalLink.textContent = project.link;
+  }
   chips.innerHTML = "";
   project.tech.forEach((tech) => {
     const chip = document.createElement("div");
@@ -200,8 +198,8 @@ const addProjects = () => {
   }
 };
 
-const closeMobileMenu = () => {
-  const menu = document.getElementById("mobile-nav");
+const closeMenu = () => {
+  const menu = document.getElementById("menu-nav");
   menu.style.display = "none";
 };
 
@@ -213,6 +211,9 @@ window.onload = () => {
   const modalClose = document.getElementsByClassName("modal-close")[0];
   const menuButtons = document.querySelectorAll(
     ".material-symbols-outlined.menu-icon"
+  );
+  const closeMenuButton = document.querySelector(
+    ".material-symbols-outlined.close-icon"
   );
 
   addProjects();
@@ -230,19 +231,19 @@ window.onload = () => {
   aboutButtons.forEach((button) => {
     button.addEventListener("click", () => {
       togglePage("about", false, false);
-      closeMobileMenu();
+      closeMenu();
     });
   });
   contactButtons.forEach((button) => {
     button.addEventListener("click", () => {
       togglePage("contact", true, false);
-      closeMobileMenu();
+      closeMenu();
     });
   });
   projectsButtons.forEach((button) => {
     button.addEventListener("click", () => {
       togglePage("projects", true, false);
-      closeMobileMenu();
+      closeMenu();
     });
   });
   modalClose.addEventListener("click", () => {
@@ -255,9 +256,12 @@ window.onload = () => {
   });
   menuButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const menu = document.getElementById("mobile-nav");
+      const menu = document.getElementById("menu-nav");
       menu.style.display = "flex";
     });
+  });
+  closeMenuButton.addEventListener("click", () => {
+    closeMenu();
   });
 
   document.addEventListener("fullscreenchange", function () {

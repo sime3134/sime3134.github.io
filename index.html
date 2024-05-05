@@ -3,8 +3,10 @@
   <head>
     <title>Simon Jern</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +27,8 @@
     <meta name="author" content="Simon Jern" />
   </head>
   <body>
-    <nav id="mobile-nav">
+    <nav id="menu-nav">
+      <span class="material-symbols-outlined close-icon"> close </span>
       <ul>
         <li class="about-button">about</li>
         <li class="projects-button">projects</li>
@@ -64,8 +67,10 @@
                 family and dogs, playing video games, and outdoors. I'm always
                 looking to learn new things and improve my skills, so don't
                 hesitate to
-                <span class="strong"><a href="/?contact">reach out</a></span> if
-                you have any interesting projects or opportunities.
+                <span class="strong link"
+                  ><a href="/?contact">reach out</a></span
+                >
+                if you have any interesting projects or opportunities.
               </p>
               <h4>
                 <span class="material-symbols-outlined"> school </span>
@@ -134,7 +139,7 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  <li class="chip" id="linkedin">
+                  <li class="chip link" id="linkedin">
                     <span class="text-with-icon"
                       ><svg
                         width="24"
@@ -157,7 +162,7 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  <li class="chip" id="github">
+                  <li class="chip link" id="github">
                     <span class="text-with-icon"
                       ><svg
                         width="24"
