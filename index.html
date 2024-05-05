@@ -8,8 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Signika&:wght@300..700&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
@@ -21,6 +25,13 @@
     <meta name="author" content="Simon Jern" />
   </head>
   <body>
+    <nav id="mobile-nav">
+      <ul>
+        <li class="about-button">about</li>
+        <li class="projects-button">projects</li>
+        <li class="contact-button">contact</li>
+      </ul>
+    </nav>
     <div class="outer-container">
       <div class="container">
         <main>
@@ -31,88 +42,142 @@
             </div>
           </section>
           <section class="page" id="about-page">
-            <div class="title-container">
-              <h3 class="title">about</h3>
+            <div class="page-top">
+              <div class="title-container">
+                <h3 class="title">about</h3>
+              </div>
+              <span class="material-symbols-outlined menu-icon"> menu </span>
             </div>
-            <p>
-              Hi! I'm a <span class="strong">full-stack developer</span> with a
-              passion for clean and efficient code. I'm always looking for new
-              challenges and have tried my hand at a
-              <span class="strong"
-                >wide range of programming languages and technologies</span
-              >. When I'm not programming, I enjoy spending time with my family
-              and dogs, playing video games, and outdoors. I'm always looking to
-              learn new things and improve my skills, so don't hesitate to
-              <span class="strong">reach out</span> if you have any interesting
-              projects or opportunities.
-            </p>
-            <h4>Education</h4>
-            <p>
-              I have a bachelor's degree in
-              <span class="strong">computer science</span> from the university
-              of Malmö. I built several projects during my years there and one
-              of them was published by the university. Before that I studied
-              <span class="strong">game development</span> in high school.
-            </p>
-            <h4>Experience</h4>
-            <p>
-              I currently work at <span class="strong">Netcompany</span> in
-              Copenhagen, Denmark where I build
-              <span class="strong">full-stack applications</span>. Before my
-              move to IT, I worked as a
-              <span class="strong">Training Manager</span> at a franchise where
-              I hired, trained and developed staff members. I was also
-              responsible for the
-              <span class="strong">best-selling unit</span> in the franchise
-              where I
-              <span class="strong">significantly lowered the waiting time</span>
-              for the customers.
-            </p>
-            <h4>Skills</h4>
-            <ul class="list">
-              <li>Java</li>
-              <li>Python</li>
-              <li>C#</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>MongoDB</li>
-              <li>SQL</li>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>Next.js</li>
-              <li>REST</li>
-              <li>Git</li>
-              <li>Docker</li>
-            </ul>
-            <h4>Languages</h4>
-            <ul class="flex">
-              <li>Swedish</li>
-              <li>English</li>
-              <li>Japanese</li>
-            </ul>
+            <div class="page-content">
+              <h4>
+                <span class="material-symbols-outlined"> waving_hand </span>
+                Hello!
+              </h4>
+              <p>
+                I'm <span class="strong">Simon Jern</span>, a
+                <span class="strong">full-stack developer</span> with a passion
+                for <span class="strong">clean and efficient code</span>. I'm
+                always looking for new challenges and have tried my hand at a
+                <span class="strong"
+                  >wide range of programming languages and technologies</span
+                >. When I'm not programming, I enjoy spending time with my
+                family and dogs, playing video games, and outdoors. I'm always
+                looking to learn new things and improve my skills, so don't
+                hesitate to
+                <span class="strong"><a href="/?contact">reach out</a></span> if
+                you have any interesting projects or opportunities.
+              </p>
+              <h4>
+                <span class="material-symbols-outlined"> school </span>
+                Education
+              </h4>
+              <p>
+                I have a bachelor's degree in
+                <span class="strong">computer science</span> from the university
+                of Malmö. I built several projects during my years there and one
+                of them was published by the university. Before that I studied
+                <span class="strong">game development</span> in high school.
+              </p>
+              <h4>
+                <span class="material-symbols-outlined"> public </span>
+                Experience
+              </h4>
+              <p>
+                I currently work at <span class="strong">Netcompany</span> in
+                Copenhagen, Denmark where I build
+                <span class="strong">full-stack applications</span>. Before my
+                move to IT, I worked as a
+                <span class="strong">Training Manager</span> at a franchise
+                where I hired, trained and developed staff members. I was also
+                responsible for the
+                <span class="strong">best-selling unit</span> in the franchise
+                where I
+                <span class="strong"
+                  >significantly lowered the waiting time</span
+                >
+                for the customers.
+              </p>
+              <h4>
+                <span class="material-symbols-outlined"> bolt </span> Skills
+              </h4>
+              <ul class="list">
+                <li class="chip">Java</li>
+                <li class="chip">Python</li>
+                <li class="chip">C#</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">MongoDB</li>
+                <li class="chip">SQL</li>
+                <li class="chip">React</li>
+                <li class="chip">Node.js</li>
+                <li class="chip">Next.js</li>
+                <li class="chip">REST</li>
+                <li class="chip">Git</li>
+                <li class="chip">Docker</li>
+              </ul>
+              <h4>
+                <span class="material-symbols-outlined"> language </span>
+                Languages
+              </h4>
+              <ul class="list">
+                <li class="chip">Swedish</li>
+                <li class="chip">English</li>
+                <li class="chip">Japanese</li>
+              </ul>
+              <h4>
+                <span class="material-symbols-outlined"> badge </span> Profiles
+              </h4>
+              <ul class="list">
+                <a
+                  href="https://www.linkedin.com/in/simon-jern/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <li class="chip" id="linkedin">LinkedIn</li>
+                </a>
+                <a
+                  href="https://github.com/sime3134"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <li class="chip" id="github">GitHub</li>
+                </a>
+              </ul>
+            </div>
           </section>
           <section class="page" id="projects-page">
-            <div class="title-container">
-              <h3 class="title">projects</h3>
+            <div class="page-top">
+              <div class="title-container">
+                <h3 class="title">projects</h3>
+              </div>
+              <span class="material-symbols-outlined menu-icon"> menu </span>
             </div>
             <div class="projects"></div>
           </section>
           <section class="page" id="contact-page">
-            <div class="title-container">
-              <h3 class="title">contact</h3>
+            <div class="page-top">
+              <div class="title-container">
+                <h3 class="title">contact</h3>
+              </div>
+              <span class="material-symbols-outlined menu-icon"> menu </span>
             </div>
             <p>
-              You can contact me at
+              I develop custom websites and applications for both individuals
+              and businesses. If you have a project you'd like to discuss,
+              please don't hesitate to contact me.
+            </p>
+            <p class="text-with-icon">
+              <span class="material-symbols-outlined"> mail </span>
               <a href="mailto:simonnjern@gmail.com">simonnjern@gmail.com</a>
             </p>
           </section>
         </main>
-        <nav>
+        <nav id="start-page-nav">
           <ul>
-            <li id="about-button">about</li>
-            <li id="projects-button">projects</li>
-            <li id="contact-button">contact</li>
+            <li class="about-button">about</li>
+            <li class="projects-button">projects</li>
+            <li class="contact-button">contact</li>
           </ul>
         </nav>
       </div>
@@ -123,22 +188,18 @@
         <h2 class="modal-title"></h2>
         <div class="modal-innercontent">
           <div class="media-wrapper">
-            <img class="modal-image" />
-            <video
-              class="project-media modal-video"
-              src="media/cert_video.mp4"
-              muted
-              controls
-            ></video>
+            <div class="img-wrapper">
+              <img class="project-media modal-image" />
+              <span></span>
+            </div>
+            <video class="project-media modal-video" muted controls></video>
           </div>
           <div class="modal-details">
-            <div class="modal-tech">
-              <div class="chip">Java</div>
-            </div>
-            <p>
-              Link:
+            <div class="modal-chips"></div>
+            <div class="text-with-icon">
+              <span class="material-symbols-outlined"> link </span>
               <a class="modal-link" target="_blank" rel="noopener"></a>
-            </p>
+            </div>
             <p class="modal-text"></p>
           </div>
         </div>

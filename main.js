@@ -56,7 +56,7 @@ const projects = [
   {
     id: 5,
     title: "root_access",
-    description: `a multiplayer game crafted by a team of 5 during a 48-hour Global Game Jam. Comprising 2 developers, 2 artists, and a sound designer, we designed it from scratch in Java to run on a local network, supporting two players. In this game, participants aim to hack into a villain's computer through collaborative efforts to deduce the correct password. The twist? Each player sees only half the password on their screen. Without peeking at each other's displays, they must verbally share their half to piece together the full password before time expires. Success leads to progressively harder levels, enhancing the challenge.`,
+    description: `A multiplayer game crafted by a team of 5 during a 48-hour Global Game Jam. Comprising 2 developers, 2 artists, and a sound designer, we designed it from scratch in Java to run on a local network, supporting two players. In this game, participants aim to hack into a villain's computer through collaborative efforts to deduce the correct password. The twist? Each player sees only half the password on their screen. Without peeking at each other's displays, they must verbally share their half to piece together the full password before time expires. Success leads to progressively harder levels, enhancing the challenge.`,
     resource: "media/root_video.mp4",
     video: true,
     link: "https://github.com/sime3134/rootaccess_game",
@@ -79,22 +79,40 @@ const togglePage = (pageName, flex, replace) => {
   const contactPage = document.getElementById("contact-page");
   const projectsPage = document.getElementById("projects-page");
   const pageElement = document.getElementById(`${pageName}-page`);
-  const aboutButton = document.getElementById("about-button");
-  const contactButton = document.getElementById("contact-button");
-  const projectsButton = document.getElementById("projects-button");
-  const pageButton = document.getElementById(`${pageName}-button`);
+  const aboutButtons = document.querySelectorAll(".about-button");
+  const contactButtons = document.querySelectorAll(".contact-button");
+  const projectsButtons = document.querySelectorAll(".projects-button");
+  const pageButtons = document.querySelectorAll(`.${pageName}-button`);
+  const innerContainer = document.getElementsByClassName("container")[0];
+  const startPageNav = document.getElementById("start-page-nav");
+  if (pageName === "start") {
+    startPageNav.style.display = "block";
+  } else {
+    startPageNav.style.display = "none";
+  }
   startPage.style.display = "none";
   aboutPage.style.display = "none";
   contactPage.style.display = "none";
   projectsPage.style.display = "none";
   pageElement.style.display = flex ? "flex" : "block";
+  innerContainer.style.minHeight = pageName === "start" ? "90vh" : "20vh";
   replace
     ? history.replaceState({ page: pageName }, pageName, `?${pageName}`)
     : history.pushState({ page: pageName }, pageName, `?${pageName}`);
-  aboutButton.classList.remove("active");
-  contactButton.classList.remove("active");
-  projectsButton.classList.remove("active");
-  pageName !== "start" ? pageButton.classList.add("active") : null;
+  aboutButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
+  contactButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
+  projectsButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
+  if (pageName !== "start") {
+    pageButtons.forEach((button) => {
+      button.classList.add("active");
+    });
+  }
 };
 
 window.addEventListener("popstate", function (event) {
@@ -112,7 +130,6 @@ window.addEventListener("popstate", function (event) {
 });
 
 const displayModal = (projectId) => {
-  console.log(projectId);
   const modal = document.getElementsByClassName("modal")[0];
   const project = projects.find((project) => project.id === projectId);
   const modalImage = document.getElementsByClassName("modal-image")[0];
@@ -120,13 +137,28 @@ const displayModal = (projectId) => {
   const modalTitle = document.getElementsByClassName("modal-title")[0];
   const modalDescription = document.getElementsByClassName("modal-text")[0];
   const modalLink = document.getElementsByClassName("modal-link")[0];
+  const chips = document.getElementsByClassName("modal-chips")[0];
 
   modalImage.src = !project.video ? project.resource : "";
   modalVideo.src = project.video ? project.resource : "";
+  if (project.video) {
+    modalImage.style.display = "none";
+    modalVideo.style.display = "block";
+  } else {
+    modalImage.style.display = "block";
+    modalVideo.style.display = "none";
+  }
   modalTitle.textContent = project.title;
   modalDescription.textContent = project.description;
   modalLink.href = project.link;
   modalLink.textContent = project.link;
+  chips.innerHTML = "";
+  project.tech.forEach((tech) => {
+    const chip = document.createElement("div");
+    chip.classList.add("chip");
+    chip.textContent = tech;
+    chips.appendChild(chip);
+  });
 
   modal.style.display = "block";
 };
@@ -168,12 +200,20 @@ const addProjects = () => {
   }
 };
 
+const closeMobileMenu = () => {
+  const menu = document.getElementById("mobile-nav");
+  menu.style.display = "none";
+};
+
 window.onload = () => {
-  const aboutButton = document.getElementById("about-button");
-  const contactButton = document.getElementById("contact-button");
-  const projectsButton = document.getElementById("projects-button");
+  const aboutButtons = document.querySelectorAll(".about-button");
+  const contactButtons = document.querySelectorAll(".contact-button");
+  const projectsButtons = document.querySelectorAll(".projects-button");
   const modal = document.getElementsByClassName("modal")[0];
   const modalClose = document.getElementsByClassName("modal-close")[0];
+  const menuButtons = document.querySelectorAll(
+    ".material-symbols-outlined.menu-icon"
+  );
 
   addProjects();
 
@@ -187,14 +227,23 @@ window.onload = () => {
     togglePage("start", true, true);
   }
 
-  aboutButton.addEventListener("click", () => {
-    togglePage("about", false, false);
+  aboutButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      togglePage("about", false, false);
+      closeMobileMenu();
+    });
   });
-  contactButton.addEventListener("click", () => {
-    togglePage("contact", true, false);
+  contactButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      togglePage("contact", true, false);
+      closeMobileMenu();
+    });
   });
-  projectsButton.addEventListener("click", () => {
-    togglePage("projects", true, false);
+  projectsButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      togglePage("projects", true, false);
+      closeMobileMenu();
+    });
   });
   modalClose.addEventListener("click", () => {
     modal.style.display = "none";
@@ -204,16 +253,20 @@ window.onload = () => {
       modal.style.display = "none";
     }
   });
+  menuButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const menu = document.getElementById("mobile-nav");
+      menu.style.display = "flex";
+    });
+  });
 
   document.addEventListener("fullscreenchange", function () {
     const videos = document.getElementsByTagName("video");
     for (let video of videos) {
       if (document.fullscreenElement) {
-        // When in fullscreen
-        video.style.objectFit = "contain"; // Ensure the whole video is visible
+        video.style.objectFit = "contain";
       } else {
-        // When exiting fullscreen
-        video.style.objectFit = "cover"; // Go back to covering the container area
+        video.style.objectFit = "cover";
       }
     }
   });
