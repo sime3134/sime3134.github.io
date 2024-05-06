@@ -219,13 +219,13 @@ window.onload = () => {
   addProjects();
 
   if (window.location.href.includes("?about")) {
-    togglePage("about", false, true);
+    togglePage("about", false, false);
   } else if (window.location.href.includes("?contact")) {
-    togglePage("contact", true, true);
+    togglePage("contact", true, false);
   } else if (window.location.href.includes("?projects")) {
-    togglePage("projects", true, true);
+    togglePage("projects", true, false);
   } else {
-    togglePage("start", true, true);
+    togglePage("start", true, false);
   }
 
   aboutButtons.forEach((button) => {
