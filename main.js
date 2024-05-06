@@ -65,7 +65,7 @@ const projects = [
   },
 ];
 
-const togglePage = (pageName, flex, replace) => {
+const togglePage = (pageName, flex, back) => {
   window.scrollTo(0, 0);
 
   const startPage = document.getElementById("start-page");
@@ -90,9 +90,7 @@ const togglePage = (pageName, flex, replace) => {
   projectsPage.style.display = "none";
   pageElement.style.display = flex ? "flex" : "block";
   innerContainer.style.minHeight = pageName === "start" ? "70vh" : "20vh";
-  replace
-    ? history.replaceState({ page: pageName }, pageName, `?${pageName}`)
-    : history.pushState({ page: pageName }, pageName, `?${pageName}`);
+  back ? history.pushState({ page: pageName }, pageName, `?${pageName}`) : null;
   aboutButtons.forEach((button) => {
     button.classList.remove("active");
   });
@@ -111,6 +109,7 @@ const togglePage = (pageName, flex, replace) => {
 
 window.addEventListener("popstate", function (event) {
   if (event.state) {
+    console.log(`Popping ${event.state.page} from history`);
     if (event.state.page === "about") {
       togglePage("about", false, false);
     } else if (event.state.page === "contact") {
@@ -217,32 +216,32 @@ window.onload = () => {
   );
 
   addProjects();
-
+  console.log("loading page");
   if (window.location.href.includes("?about")) {
-    togglePage("about", false, false);
+    togglePage("about", false, true);
   } else if (window.location.href.includes("?contact")) {
-    togglePage("contact", true, false);
+    togglePage("contact", true, true);
   } else if (window.location.href.includes("?projects")) {
-    togglePage("projects", true, false);
+    togglePage("projects", true, true);
   } else {
-    togglePage("start", true, false);
+    togglePage("start", true, true);
   }
 
   aboutButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      togglePage("about", false, false);
+      togglePage("about", false, true);
       closeMenu();
     });
   });
   contactButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      togglePage("contact", true, false);
+      togglePage("contact", true, true);
       closeMenu();
     });
   });
   projectsButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      togglePage("projects", true, false);
+      togglePage("projects", true, true);
       closeMenu();
     });
   });
