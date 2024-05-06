@@ -27,29 +27,41 @@
     <meta name="author" content="Simon Jern" />
   </head>
   <body>
-    <nav id="menu-nav">
-      <span class="material-symbols-outlined close-icon"> close </span>
+    <nav id="menu-nav" role="navigation" aria-label="Primary navigation">
+      <button
+        aria-label="Close menu"
+        class="material-symbols-outlined close-icon"
+      >
+        close
+      </button>
       <ul>
-        <li class="about-button">about</li>
-        <li class="projects-button">projects</li>
-        <li class="contact-button">contact</li>
+        <li>
+          <button class="about-button">about</button>
+        </li>
+        <li><button class="projects-button">projects</button></li>
+        <li><button class="contact-button">contact</button></li>
       </ul>
     </nav>
     <div class="outer-container">
-      <div class="container">
+      <div class="container" aria-live="polite">
         <main>
-          <section class="page" id="start-page">
+          <section aria-labelledby="main-title" class="page" id="start-page">
             <div class="title-container">
-              <h1 class="title">simon jern</h1>
+              <h1 id="main-title" class="title">simon jern</h1>
               <h2 class="subtitle">SOFTWARE DEVELOPER</h2>
             </div>
           </section>
-          <section class="page" id="about-page">
+          <section aria-labelledby="about-title" class="page" id="about-page">
             <div class="page-top">
               <div class="title-container">
-                <h3 class="title">about</h3>
+                <h3 id="about-title" class="title">about</h3>
               </div>
-              <span class="material-symbols-outlined menu-icon"> menu </span>
+              <button
+                aria-label="Open menu"
+                class="material-symbols-outlined menu-icon"
+              >
+                menu
+              </button>
             </div>
             <div class="page-content">
               <h4>
@@ -142,6 +154,7 @@
                   <li class="chip link" id="linkedin">
                     <span class="text-with-icon"
                       ><svg
+                        role="img"
                         width="24"
                         height="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -165,6 +178,7 @@
                   <li class="chip link" id="github">
                     <span class="text-with-icon"
                       ><svg
+                        role="img"
                         width="24"
                         height="24"
                         xmlns="http://www.w3.org/2000/svg"
@@ -183,12 +197,21 @@
               </ul>
             </div>
           </section>
-          <section class="page" id="projects-page">
+          <section
+            aria-labelledby="projects-title"
+            class="page"
+            id="projects-page"
+          >
             <div class="page-top">
               <div class="title-container">
-                <h3 class="title">projects</h3>
+                <h3 id="projects-title" class="title">projects</h3>
               </div>
-              <span class="material-symbols-outlined menu-icon"> menu </span>
+              <button
+                aria-label="Open menu"
+                class="material-symbols-outlined menu-icon"
+              >
+                menu
+              </button>
             </div>
             <div class="projects"></div>
           </section>
@@ -197,7 +220,7 @@
               <div class="title-container">
                 <h3 class="title">contact</h3>
               </div>
-              <span class="material-symbols-outlined menu-icon"> menu </span>
+              <button class="material-symbols-outlined menu-icon">menu</button>
             </div>
             <p>
               I develop custom websites and applications for both individuals
@@ -210,24 +233,27 @@
             </p>
           </section>
         </main>
-        <nav id="start-page-nav">
+        <nav id="start-page-nav" role="navigation">
           <ul>
-            <li class="about-button">about</li>
-            <li class="projects-button">projects</li>
-            <li class="contact-button">contact</li>
+            <li>
+              <button class="about-button">about</button>
+            </li>
+            <li><button class="projects-button">projects</button></li>
+            <li><button class="contact-button">contact</button></li>
           </ul>
         </nav>
       </div>
     </div>
-    <div class="modal">
+    <div class="modal" aria-modal="true" role="contentinfo">
       <div class="modal-content">
-        <span class="modal-close">&times;</span>
+        <button aria-label="Close project modal" class="modal-close">
+          &times;
+        </button>
         <h2 class="modal-title"></h2>
         <div class="modal-innercontent">
           <div class="media-wrapper">
             <div class="img-wrapper">
               <img class="project-media modal-image" />
-              <span></span>
             </div>
             <video class="project-media modal-video" muted controls></video>
           </div>

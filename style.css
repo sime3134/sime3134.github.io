@@ -118,6 +118,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
@@ -186,6 +192,13 @@ a:hover {
   right: 10px;
 }
 
+/* add hover effect*/
+.material-symbols-outlined.menu-icon:hover,
+.material-symbols-outlined.close-icon:hover {
+  color: #f76b1c;
+  transform: translateY(-2px);
+}
+
 .text-with-icon {
   display: flex;
   gap: 10px;
@@ -232,7 +245,6 @@ a:hover {
 }
 
 .modal-close {
-  color: #aaa;
   float: right;
   font-size: 3em;
   font-weight: bold;
@@ -521,17 +533,16 @@ nav ul {
   gap: 15px;
 }
 
-nav ul li {
+nav ul li button {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: #35424a;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 500;
   transition: color 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
 }
 
-nav ul li:hover {
+nav ul li button:hover {
   color: #717577;
   text-decoration: underline;
 }
@@ -549,7 +560,7 @@ nav ul li:hover {
   .subtitle {
     font-size: 1.7em;
   }
-  nav ul li {
+  nav ul li button {
     font-size: 3.4em;
   }
   .container {
@@ -564,11 +575,5 @@ nav ul li:hover {
   }
   .page-content {
     padding: 0 10px;
-  }
-}
-
-@media screen and (min-width: 2600px) {
-  nav ul li {
-    font-size: 4.4em;
   }
 }

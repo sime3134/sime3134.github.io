@@ -109,7 +109,6 @@ const togglePage = (pageName, flex, back) => {
 
 window.addEventListener("popstate", function (event) {
   if (event.state) {
-    console.log(`Popping ${event.state.page} from history`);
     if (event.state.page === "about") {
       togglePage("about", false, false);
     } else if (event.state.page === "contact") {
@@ -157,6 +156,8 @@ const displayModal = (projectId) => {
     chips.appendChild(chip);
   });
 
+  modal.setAttribute("tabindex", "0");
+  modal.focus();
   modal.style.display = "block";
 };
 
@@ -191,6 +192,7 @@ const addProjects = () => {
       displayModal(project.id);
     });
 
+    projectElement.ariaLabel = `open project modal for ${project.title}`;
     projectElement.appendChild(projectMedia);
     projectElement.appendChild(projectTitle);
     projectContainer.appendChild(projectElement);
@@ -216,7 +218,6 @@ window.onload = () => {
   );
 
   addProjects();
-  console.log("loading page");
   if (window.location.href.includes("?about")) {
     togglePage("about", false, true);
   } else if (window.location.href.includes("?contact")) {
@@ -247,10 +248,12 @@ window.onload = () => {
   });
   modalClose.addEventListener("click", () => {
     modal.style.display = "none";
+    document.getElementById("openModalButton").focus();
   });
   modal.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
+      document.getElementById("openModalButton").focus();
     }
   });
   menuButtons.forEach((button) => {
