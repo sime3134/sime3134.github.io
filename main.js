@@ -66,6 +66,7 @@ const projects = [
 ];
 
 const togglePage = (pageName, flex, back) => {
+  console.log(pageName);
   window.scrollTo(0, 0);
 
   const startPage = document.getElementById("start-page");
@@ -248,12 +249,10 @@ window.onload = () => {
   });
   modalClose.addEventListener("click", () => {
     modal.style.display = "none";
-    document.getElementById("openModalButton").focus();
   });
   modal.addEventListener("click", (event) => {
     if (event.target === modal) {
       modal.style.display = "none";
-      document.getElementById("openModalButton").focus();
     }
   });
   menuButtons.forEach((button) => {
