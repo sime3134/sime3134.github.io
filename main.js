@@ -66,7 +66,6 @@ const projects = [
 ];
 
 const togglePage = (pageName, flex, back) => {
-  console.log(pageName);
   window.scrollTo(0, 0);
 
   const startPage = document.getElementById("start-page");
