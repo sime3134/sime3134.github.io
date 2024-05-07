@@ -192,7 +192,6 @@ a:hover {
   right: 10px;
 }
 
-/* add hover effect*/
 .material-symbols-outlined.menu-icon:hover,
 .material-symbols-outlined.close-icon:hover {
   color: #f76b1c;
@@ -315,6 +314,10 @@ a:hover {
 
 #github {
   background-color: #333;
+}
+
+#resume {
+  background-color: #35424a;
 }
 
 .media-wrapper {
