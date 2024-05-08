@@ -22,7 +22,6 @@
       }
     </script>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -58,6 +57,7 @@
         </li>
         <li><button class="projects-button">projects</button></li>
         <li><button class="contact-button">contact</button></li>
+        <li><button class="freelance-button">services</button></li>
       </ul>
     </nav>
     <div class="outer-container">
@@ -101,6 +101,12 @@
                   ><a href="/?contact">reach out</a></span
                 >
                 if you have any interesting projects or opportunities.
+              </p>
+              <p>
+                I develop custom websites and application for individuals and
+                companies which you can read more about
+                <span class="strong link"><a href="/custom">here</a></span
+                >.
               </p>
               <h4>
                 <span class="material-symbols-outlined"> school </span>
@@ -163,7 +169,7 @@
               <h4>
                 <span class="material-symbols-outlined"> badge </span> Profiles
               </h4>
-              <ul class="list">
+              <div class="list">
                 <a
                   href="https://github.com/sime3134"
                   target="_blank"
@@ -235,7 +241,7 @@
                     </span>
                   </li>
                 </a>
-              </ul>
+              </div>
             </div>
           </section>
           <section
@@ -256,22 +262,89 @@
             </div>
             <div class="projects"></div>
           </section>
-          <section class="page" id="contact-page">
+          <section
+            aria-labelledby="contact-title"
+            class="page"
+            id="contact-page"
+          >
             <div class="page-top">
               <div class="title-container">
-                <h3 class="title">contact</h3>
+                <h3 id="contact-title" class="title">contact</h3>
               </div>
               <button class="material-symbols-outlined menu-icon">menu</button>
             </div>
             <p>
               I develop custom websites and applications for both individuals
-              and businesses. If you have a project you'd like to discuss,
-              please don't hesitate to contact me.
+              and businesses, read more about this
+              <a href="/?freelance">here</a>. If you have a project you'd like
+              to discuss, please don't hesitate to contact me.
             </p>
             <p class="text-with-icon">
               <span class="material-symbols-outlined"> mail </span>
               <a href="mailto:simonnjern@gmail.com">simonnjern@gmail.com</a>
             </p>
+          </section>
+          <section
+            aria-labelledby="freelance-title"
+            class="page"
+            id="freelance-page"
+          >
+            <div class="page-top">
+              <div class="title-container">
+                <h3 id="freelance-title" class="title">services</h3>
+              </div>
+              <button
+                aria-label="Open menu"
+                class="material-symbols-outlined menu-icon"
+              >
+                menu
+              </button>
+            </div>
+            <div class="page-content">
+              <h4>Svenska</h4>
+              <p>
+                Jag är Simon Jern, en mångsidig fullstackutvecklare som brinner
+                för att skapa skräddarsydda mjukvarulösningar. Oavsett om du
+                behöver en snygg webbplats eller en komplex applikation
+                levererar jag högkvalitativa, kostnadseffektiva digitala
+                tjänster för både privatpersoner och företag.
+              </p>
+              <p><span class="strong">Varför välja mig?</span></p>
+              <p>
+                Bred teknisk kompetens: Expert på Java, Python, C#, JavaScript,
+                React, Node.js och mer. Jag hanterar allt från front-end till
+                back-end och säkerställer en sömlös integration över alla
+                plattformar.
+              </p>
+              <p>
+                Prisvärd: Jag erbjuder förstklassiga lösningar som respekterar
+                din budget och ser till att du får bästa möjliga värde.
+              </p>
+              <p><a href="/?contact">Kontakta mig här</a></p>
+              <h4>English</h4>
+              <p>
+                I’m Simon Jern, a versatile full-stack developer passionate
+                about crafting tailor-made software solutions. Whether you need
+                a sleek website or a complex application, I deliver
+                high-quality, cost-effective digital services for both
+                individuals and businesses. I work from Sweden but can assist
+                you no matter where you are in the world.
+              </p>
+              <p><span class="strong">Why Choose Me?</span></p>
+              <p>
+                Broad Technical Skills: Expert in Java, Python, C#, JavaScript,
+                React, Node.js, and more. I handle everything from front-end to
+                back-end, ensuring a seamless integration across all platforms.
+              </p>
+              <p>
+                Affordable Excellence: I provide top-notch solutions that
+                respect your budget, ensuring you get the best value without
+                breaking the bank.
+              </p>
+              <p>
+                <a href="/?contact">Contact me here</a>
+              </p>
+            </div>
           </section>
         </main>
         <nav id="start-page-nav" role="navigation">
@@ -281,6 +354,7 @@
             </li>
             <li><button class="projects-button">projects</button></li>
             <li><button class="contact-button">contact</button></li>
+            <li><button class="freelance-button">services</button></li>
           </ul>
         </nav>
       </div>
@@ -294,7 +368,7 @@
         <div class="modal-innercontent">
           <div class="media-wrapper">
             <div class="img-wrapper">
-              <img class="project-media modal-image" />
+              <img alt="project image" class="project-media modal-image" />
             </div>
             <video class="project-media modal-video" muted controls></video>
           </div>
@@ -308,6 +382,12 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="enlargened-image">
+      <button aria-label="Close enlarged image" class="close-enlargened-image">
+        &times;
+      </button>
+      <img alt="enlargened image" class="enlargened-image-content" />
     </div>
     <script src="main.js"></script>
   </body>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
    <!-- Main/Home Page -->
    <url>
       <loc>https://simonjern.com/</loc>
@@ -27,5 +29,79 @@
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.7</priority>
+   </url>
+   <!-- Services Section -->
+   <url>
+      <loc>https://simonjern.com/?freelance</loc>
+      <lastmod>2024-05-08</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://simonjern.com/media/exlect.webp</loc>
+      <image:image>
+         <image:loc>https://simonjern.com/media/exlect.webp</image:loc>
+         <image:title>ExLect Web App developed by Simon Jern and others</image:title>
+      </image:image>
+      <lastmod>2024-05-06</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+    <url>
+      <loc>https://simonjern.com/media/thesis_video.mp4</loc>
+      <video:video>
+         <video:content_loc>https://simonjern.com/media/thesis_video.mp4</video:content_loc>
+         <video:title>Multi-Target Pathfinding Video with BFS and A*</video:title>
+         <video:description>This video illustrates the comparison between BFS and A* algorithms in pathfinding made for my thesis.</video:description>
+      </video:video>
+      <lastmod>2024-05-06</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://simonjern.com/media/where.mp4</loc>
+      <video:video>
+         <video:content_loc>https://simonjern.com/media/where.mp4</video:content_loc>
+         <video:title>Where did I put that? App Demo</video:title>
+         <video:description>An app to help you remember where you put things.</video:description>
+      </video:video>
+      <lastmod>2024-05-06</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://simonjern.com/media/calendarfetcher.webp</loc>
+      <image:image>
+         <image:loc>https://simonjern.com/media/calendarfetcher.webp</image:loc>
+         <image:title>g-calendar-fetcher Library</image:title>
+      </image:image>
+      <lastmod>2024-05-06</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+    <url>
+      <loc>https://simonjern.com/media/sgb.webp</loc>
+      <image:image>
+         <image:loc>https://simonjern.com/media/sgb.webp</image:loc>
+         <image:title>Southern Gospel Boys Website</image:title>
+      </image:image>
+      <lastmod>2024-05-06</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://simonjern.com/media/root_video.mp4</loc>
+      <video:video>
+         <video:content_loc>https://simonjern.com/media/root_video.mp4</video:content_loc>
+         <video:title>root_access Game Play</video:title>
+         <video:description>A collaborative multiplayer game where you hack into a system. Developed during a 48h game jam.</video:description>
+      </video:video>
+      <lastmod>2024-05-06</lastmod>
+      <changefreq>yearly</changefreq>
+   </url>
+   <url>
+      <loc>https://simonjern.com/media/puzzle_video.mp4</loc>
+      <video:video>
+         <video:content_loc>https://simonjern.com/media/puzzle_video.mp4</video:content_loc>
+         <video:title>Puzzle Quest Gameplay Demo</video:title>
+         <video:description>Game developed during a university course at Malmö university.</video:description>
+      </video:video>
+      <lastmod>2024-05-06</lastmod>
+      <changefreq>yearly</changefreq>
    </url>
 </urlset>
