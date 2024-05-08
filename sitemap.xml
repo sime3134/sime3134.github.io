@@ -49,7 +49,6 @@
     <url>
       <loc>https://simonjern.com/media/thesis_video.mp4</loc>
       <video:video>
-         <video:content_loc>https://simonjern.com/media/thesis_video.mp4</video:content_loc>
          <video:title>Multi-Target Pathfinding Video with BFS and A*</video:title>
          <video:description>This video illustrates the comparison between BFS and A* algorithms in pathfinding made for my thesis.</video:description>
       </video:video>
