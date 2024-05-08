@@ -42,6 +42,7 @@
       <image:image>
          <image:loc>https://simonjern.com/media/exlect.webp</image:loc>
          <image:title>ExLect Web App developed by Simon Jern and others</image:title>
+         <image:caption>ExLect is a web app that helps students to find external lectures at Malmö University.</image:caption>
       </image:image>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -49,8 +50,9 @@
     <url>
       <loc>https://simonjern.com/media/thesis_video.mp4</loc>
       <video:video>
-         <video:title>Multi-Target Pathfinding Video with BFS and A*</video:title>
-         <video:description>This video illustrates the comparison between BFS and A* algorithms in pathfinding made for my thesis.</video:description>
+         <video:title>Simulation of Multi-Target Pathfinding with BFS and A*</video:title>
+         <video:description>This video illustrates the comparison between BFS and A* algorithms in pathfinding made for Simon Jern's thesis. The simulation framework is developed by Simon Jern and others.</video:description>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/thesis.png</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -59,7 +61,8 @@
       <loc>https://simonjern.com/media/where.mp4</loc>
       <video:video>
          <video:title>Where did I put that? App Demo</video:title>
-         <video:description>An app to help you remember where you put things.</video:description>
+         <video:description>An app developed by Simon Jern to help you remember where you put things.</video:description>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/where.png</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -68,7 +71,8 @@
       <loc>https://simonjern.com/media/calendarfetcher.webp</loc>
       <image:image>
          <image:loc>https://simonjern.com/media/calendarfetcher.webp</image:loc>
-         <image:title>g-calendar-fetcher Library</image:title>
+         <image:title>g-calendar-fetcher Javascript Library</image:title>
+         <image:caption>g-calendar-fetcher is an open source javascript library developed by Simon Jern that fetches events from a Google Calendar.</image:caption>
       </image:image>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -78,6 +82,7 @@
       <image:image>
          <image:loc>https://simonjern.com/media/sgb.webp</image:loc>
          <image:title>Southern Gospel Boys Website</image:title>
+         <image:caption>Website developed by Simon Jern for the music band Southern Gospel Boys.</image:caption>
       </image:image>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -85,8 +90,9 @@
    <url>
       <loc>https://simonjern.com/media/root_video.mp4</loc>
       <video:video>
-         <video:title>root_access Game Play</video:title>
-         <video:description>A collaborative multiplayer game where you hack into a system. Developed during a 48h game jam.</video:description>
+         <video:title>root_access Gameplay Demo</video:title>
+         <video:description>A collaborative multiplayer game where you hack into a system. Developed by Simon Jern and others during a 48h game jam.</video:description>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/root.png</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -95,7 +101,8 @@
       <loc>https://simonjern.com/media/puzzle_video.mp4</loc>
       <video:video>
          <video:title>Puzzle Quest Gameplay Demo</video:title>
-         <video:description>Game developed during a university course at Malmö university.</video:description>
+         <video:description>Game developed by Simon Jern and others during a university course at Malmö university.</video:description>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/puzzle.png</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
