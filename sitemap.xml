@@ -59,7 +59,6 @@
    <url>
       <loc>https://simonjern.com/media/where.mp4</loc>
       <video:video>
-         <video:content_loc>https://simonjern.com/media/where.mp4</video:content_loc>
          <video:title>Where did I put that? App Demo</video:title>
          <video:description>An app to help you remember where you put things.</video:description>
       </video:video>
@@ -87,7 +86,6 @@
    <url>
       <loc>https://simonjern.com/media/root_video.mp4</loc>
       <video:video>
-         <video:content_loc>https://simonjern.com/media/root_video.mp4</video:content_loc>
          <video:title>root_access Game Play</video:title>
          <video:description>A collaborative multiplayer game where you hack into a system. Developed during a 48h game jam.</video:description>
       </video:video>
@@ -97,7 +95,6 @@
    <url>
       <loc>https://simonjern.com/media/puzzle_video.mp4</loc>
       <video:video>
-         <video:content_loc>https://simonjern.com/media/puzzle_video.mp4</video:content_loc>
          <video:title>Puzzle Quest Gameplay Demo</video:title>
          <video:description>Game developed during a university course at Malmö university.</video:description>
       </video:video>
