@@ -52,7 +52,7 @@
       <video:video>
          <video:title>Simulation of Multi-Target Pathfinding with BFS and A*</video:title>
          <video:description>This video illustrates the comparison between BFS and A* algorithms in pathfinding made for Simon Jern's thesis. The simulation framework is developed by Simon Jern and others.</video:description>
-         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/thesis.png</video:thumbnail_loc>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/thesis.webp</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -62,7 +62,7 @@
       <video:video>
          <video:title>Where did I put that? App Demo</video:title>
          <video:description>An app developed by Simon Jern to help you remember where you put things.</video:description>
-         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/where.png</video:thumbnail_loc>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/where.webp</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -92,7 +92,7 @@
       <video:video>
          <video:title>root_access Gameplay Demo</video:title>
          <video:description>A collaborative multiplayer game where you hack into a system. Developed by Simon Jern and others during a 48h game jam.</video:description>
-         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/root.png</video:thumbnail_loc>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/root.webp</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>
@@ -102,7 +102,7 @@
       <video:video>
          <video:title>Puzzle Quest Gameplay Demo</video:title>
          <video:description>Game developed by Simon Jern and others during a university course at Malmö university.</video:description>
-         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/puzzle.png</video:thumbnail_loc>
+         <video:thumbnail_loc>https://simonjern.com/media/thumbnails/puzzle.webp</video:thumbnail_loc>
       </video:video>
       <lastmod>2024-05-06</lastmod>
       <changefreq>yearly</changefreq>

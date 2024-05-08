@@ -16,6 +16,7 @@ const projects = [
     description: `This project was developed during my bachelor thesis at Malmö University. The aim was to compare the performance of the Breadth-First Search (BFS) algorithm and the A* algorithm in multi-target pathfinding. A simulation framework was developed in Java providing controlled simulation of the algorithms. The results showed that the BFS algorithm was faster than the A* algorithm in most multi-target cases, with the exition of very large grids.`,
     resource: "media/thesis_video.mp4",
     resourceSmall: "media/thesis_video_small.mp4",
+    thumbnail: "media/thumbnails/thesis.webp",
     video: true,
     link: "https://github.com/sime3134/pathfinding_simulation",
     tech: ["Java"],
@@ -26,6 +27,7 @@ const projects = [
     description: `I developed this Android application during a course at Umeå University. The app is designed to help the user remember where they put their belongings. The user can add several addresses, rooms, storage units and posessions to the app to later find them using the search function or browing through all locations.`,
     resource: "media/where.mp4",
     resourceSmall: "media/where_small.mp4",
+    thumbnail: "media/thumbnails/where.webp",
     video: true,
     link: "https://github.com/sime3134/WhereDidIPutThat",
     tech: ["Kotlin", "Android"],
@@ -56,6 +58,7 @@ const projects = [
     description: `A multiplayer game crafted by a team of 5 during a 48-hour Global Game Jam. Comprising 2 developers, 2 artists, and a sound designer, we designed it from scratch in Java to run on a local network, supporting two players. In this game, participants aim to hack into a villain's computer through collaborative efforts to deduce the correct password. The twist? Each player sees only half the password on their screen. Without peeking at each other's displays, they must verbally share their half to piece together the full password before time expires. Success leads to progressively harder levels, enhancing the challenge.`,
     resource: "media/root_video.mp4",
     resourceSmall: "media/root_video_small.mp4",
+    thumbnail: "media/thumbnails/root.webp",
     video: true,
     link: "https://github.com/sime3134/rootaccess_game",
     tech: ["Java"],
@@ -66,6 +69,7 @@ const projects = [
     description: `Game developed from scratch in Java for a university project. This was a fun project where we challenged ourselves by building the game completely from scratch in Java instead of using a game engine like Unity or similar. On top of the actual game we also developed an editor for the game maps to use in the game. My biggest achievement was the pathfinding system where I used A* with object pooling and threading to let the NPC traverse the game map.`,
     resource: "media/puzzle_video.mp4",
     resourceSmall: "media/puzzle_video_small.mp4",
+    thumbnail: "media/thumbnails/puzzle.webp",
     video: true,
     link: "https://github.com/sime3134/PuzzleQuest",
     tech: ["Java"],
@@ -159,6 +163,7 @@ const displayModal = (projectId) => {
   if (project.video) {
     modalImage.style.display = "none";
     modalVideo.style.display = "block";
+    modalVideo.poster = project.thumbnail;
   } else {
     modalImage.style.display = "block";
     modalVideo.style.display = "none";
@@ -211,6 +216,9 @@ const addProjects = () => {
       projectMedia.muted = true;
       projectMedia.autoplay = true;
       projectMedia.playsInline = true;
+      projectMedia.poster = project.thumbnail;
+    } else {
+      projectMedia.loading = "lazy";
     }
     projectElement.addEventListener("click", () => {
       displayModal(project.id);
