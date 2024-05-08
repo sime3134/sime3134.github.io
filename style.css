@@ -127,6 +127,7 @@ button {
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  font-feature-settings: "liga";
 }
 
 @keyframes fadeIn {
@@ -212,6 +213,7 @@ a:hover {
   margin-bottom: 20px;
   cursor: pointer;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .material-symbols-outlined.close-icon {
@@ -263,8 +265,8 @@ a:hover {
   max-width: 1000px;
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
   animation: fadeIn 0.3s ease-out;
 }
 
@@ -380,8 +382,8 @@ main {
   margin: 50px 0;
   border-radius: 8px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
   max-width: 1200px;
   min-height: 40vh;
   justify-content: space-between;
@@ -566,6 +568,7 @@ nav {
   overscroll-behavior-y: contain;
   overflow-y: auto;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 nav ul {
