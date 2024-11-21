@@ -1,13 +1,12 @@
 const projects = [
   {
     id: 0,
-    title: "ExLect",
+    title: "ExtLect",
     description: `In a team of 4 system developers and 1 information architect we developed this web app ordered by Malmö University. The university lacked a systematical way for students to find and join external lectures (guest lectures) and because of this the number of visitors were low. It was also difficult for the staff to manage the lectures as mails had to be sent forth and back. The result was this web app where students and staff at Malmö University can login to find and manage external lectures. To attract students, certificates are generated for participated lectures. `,
     resource: "media/exlect.webp",
     resourceSmall: "media/exlect_small.webp",
     video: false,
-    linkComingSoon: true,
-    link: "https://exlect.mau.se",
+    link: "https://extlect.mau.se",
     tech: ["Next.js", "Material UI", "MongoDB", "Docker"],
   },
   {
