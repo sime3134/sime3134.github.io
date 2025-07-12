@@ -1,5 +1,14 @@
 const projects = [
   {
+    id: -1,
+    title: "Document generation and distribution system",
+    description: `In one of my projects at Netcompany, I designed and built a document generation and distribution system for one of the largest banks in the Nordics. I worked closely with the client and later took full ownership of the system during handover as a track lead.`,
+    resource: "media/bank.webp",
+    resourceSmall: "media/bank_small.webp",
+    video: false,
+    tech: ["Java", "Spring Boot", "Azure", "Azure SQL", "Docker", "OmniDocs"],
+  },
+  {
     id: 0,
     title: "ExtLect",
     description: `In a team of 4 system developers and 1 information architect we developed this web app ordered by Malmö University. The university lacked a systematical way for students to find and join external lectures (guest lectures) and because of this the number of visitors were low. It was also difficult for the staff to manage the lectures as mails had to be sent forth and back. The result was this web app where students and staff at Malmö University can login to find and manage external lectures. To attract students, certificates are generated for participated lectures. `,
@@ -154,6 +163,8 @@ const displayModal = (projectId) => {
   const modalVideo = document.getElementsByClassName("modal-video")[0];
   const modalTitle = document.getElementsByClassName("modal-title")[0];
   const modalDescription = document.getElementsByClassName("modal-text")[0];
+  const modalLinkWrapper =
+    document.getElementsByClassName("modal-link-wrapper")[0];
   const modalLink = document.getElementsByClassName("modal-link")[0];
   const chips = document.getElementsByClassName("modal-chips")[0];
 
@@ -170,11 +181,14 @@ const displayModal = (projectId) => {
   }
   modalTitle.textContent = project.title;
   modalDescription.textContent = project.description;
+  modalLinkWrapper.style.display = "flex";
   if (project.linkComingSoon) {
     modalLink.textContent = "Link coming soon...";
-  } else {
+  } else if (project.link) {
     modalLink.href = project.link;
     modalLink.textContent = project.link;
+  } else {
+    modalLinkWrapper.style.display = "none";
   }
   chips.innerHTML = "";
   project.tech.forEach((tech) => {
@@ -326,4 +340,15 @@ window.onload = () => {
       }
     }
   });
+
+  //Wave hand every 2 seconds
+  const icon = document.querySelector(".waving-hand");
+
+  function triggerWave() {
+    icon.classList.remove("waving");
+    void icon.offsetWidth;
+    icon.classList.add("waving");
+  }
+
+  setInterval(triggerWave, 2000);
 };

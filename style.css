@@ -235,6 +235,15 @@ a:hover {
   flex-wrap: nowrap;
 }
 
+.default-text {
+  color: #35424a;
+  text-decoration: none;
+}
+
+.hello-text {
+  margin-bottom: 0.5rem;
+}
+
 .outer-container {
   display: flex;
   justify-content: center;
@@ -325,6 +334,89 @@ a:hover {
   font-size: 1.2em;
   margin: 5px 0;
   display: inline-block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.chip:hover {
+  background-color: #e65c00;
+  transform: translateY(-2px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: white;
+}
+
+.java-color {
+  background-color: #f89820;
+  color: white;
+}
+
+.csharp-color {
+  background-color: #239120;
+  color: white;
+}
+
+.azure-color {
+  background-color: #0078d4;
+  color: white;
+}
+
+.springboot-color {
+  background-color: #6db33f;
+  color: white;
+}
+
+.terraform-color {
+  background-color: #7b42bc;
+  color: white;
+}
+
+.python-color {
+  background-color: #306998;
+  color: white;
+}
+
+.javascript-color {
+  background-color: #f7df1e;
+  color: #333;
+}
+
+.html-color {
+  background-color: #e34c26;
+  color: white;
+}
+
+.css-color {
+  background-color: #264de4;
+  color: white;
+}
+
+.mongodb-color {
+  background-color: #4db33d;
+  color: white;
+}
+
+.nodejs-color {
+  background-color: #8cc84b;
+  color: white;
+}
+
+.nextjs-color {
+  background-color: #000000;
+  color: linear-gradient(90deg, #000, #111);
+}
+
+.git-color {
+  background-color: #f05032;
+  color: white;
+}
+
+.docker-color {
+  background-color: #2496ed;
+  color: white;
+}
+
+.react-color {
+  background-color: #61dafb;
+  color: #20232a;
 }
 
 .chip.link {
@@ -434,6 +526,12 @@ main {
 
 .strong {
   color: #f76b1c;
+  display: inline-block;
+}
+
+.strong:hover {
+  color: #e65c00;
+  transform: scale(1.02);
 }
 
 .strong.link {
@@ -548,12 +646,14 @@ main {
 }
 
 nav {
-  align-self: flex-end;
   animation: inFromRight 0.5s ease-out;
 }
 
 #start-page-nav {
   display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
 
 #menu-nav {
@@ -567,8 +667,8 @@ nav {
   align-items: center;
   overscroll-behavior-y: contain;
   overflow-y: auto;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 nav ul {
@@ -588,6 +688,36 @@ nav ul li button {
 nav ul li button:hover {
   color: #717577;
   text-decoration: underline;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  45% {
+    transform: rotate(14deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.waving {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 1s ease-in-out;
 }
 
 @media screen and (min-width: 540px) {
