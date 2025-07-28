@@ -559,12 +559,10 @@ main {
 
 .strong {
   color: #f76b1c;
-  display: inline-block;
 }
 
 .strong:hover {
   color: #e65c00;
-  transform: scale(1.02);
 }
 
 .strong.link {
