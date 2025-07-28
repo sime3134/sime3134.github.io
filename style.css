@@ -229,6 +229,10 @@ a:hover {
   transform: translateY(-2px);
 }
 
+.material-symbols-outlined.open-link-icon {
+  font-size: 14px;
+}
+
 .text-with-icon {
   display: flex;
   gap: 10px;
@@ -331,12 +335,15 @@ a:hover {
   background-color: #f76b1c;
   color: white;
   padding: 6px 9px;
-  border-radius: 10px;
+  border-radius: 3px;
   font-size: 1.2em;
   margin: 5px 0;
   display: inline-block;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   cursor: default;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
 }
 
 .chip:hover {
@@ -346,34 +353,59 @@ a:hover {
   color: white;
 }
 
+.chip.link {
+  cursor: pointer;
+}
+
+.chip.button {
+  font-size: 1.3em;
+  padding: 9px 12px;
+  border-radius: 3px;
+}
+
+.chip.button:hover {
+  opacity: 0.8;
+}
+
+.certificate-color {
+  background: rgba(230, 230, 255, 0.35);
+  border: 1px solid rgba(100, 100, 200, 0.4);
+  color: #1a2dbf;
+}
+
+.certificate-color:hover {
+  background: rgba(230, 230, 255, 0.35);
+  color: #1a2dbf;
+}
+
 .java-color {
   background-color: #f89820;
-  color: white;
+  color: #000000;
 }
 
 .csharp-color {
   background-color: #239120;
-  color: white;
+  color: #ffffff;
 }
 
 .azure-color {
-  background-color: #0078d4;
-  color: white;
+  background-color: #005a9e;
+  color: #ffffff;
 }
 
 .springboot-color {
-  background-color: #6db33f;
-  color: white;
+  background-color: #4a7d2b;
+  color: #ffffff;
 }
 
 .terraform-color {
   background-color: #7b42bc;
-  color: white;
+  color: #ffffff;
 }
 
 .python-color {
   background-color: #306998;
-  color: white;
+  color: #ffffff;
 }
 
 .javascript-color {
@@ -382,38 +414,38 @@ a:hover {
 }
 
 .html-color {
-  background-color: #e34c26;
-  color: white;
+  background-color: #b23a1d;
+  color: #ffffff;
 }
 
 .css-color {
   background-color: #264de4;
-  color: white;
+  color: #ffffff;
 }
 
 .mongodb-color {
-  background-color: #4db33d;
-  color: white;
+  background-color: #2e7d32;
+  color: #ffffff;
 }
 
 .nodejs-color {
-  background-color: #8cc84b;
-  color: white;
+  background-color: #4a7a1d;
+  color: #ffffff;
 }
 
 .nextjs-color {
   background-color: #000000;
-  color: linear-gradient(90deg, #000, #111);
+  color: #ffffff;
 }
 
 .git-color {
-  background-color: #f05032;
-  color: white;
+  background-color: #c44127;
+  color: #ffffff;
 }
 
 .docker-color {
-  background-color: #2496ed;
-  color: white;
+  background-color: #0369a1;
+  color: #ffffff;
 }
 
 .react-color {
@@ -421,15 +453,14 @@ a:hover {
   color: #20232a;
 }
 
-.chip.link {
-  font-size: 1.3em;
-  padding: 9px 12px;
-  border-radius: 3px;
+.kotlin-color {
+  background: linear-gradient(135deg, #5b35d6, #c41d47);
+  color: #ffffff;
 }
 
-.chip.link:hover {
-  transform: translateY(-2px);
-  opacity: 0.8;
+.android-color {
+  background-color: #3ddc84;
+  color: #000000;
 }
 
 #linkedin {
@@ -612,7 +643,6 @@ main {
 .title {
   font-size: 3em;
   color: #35424a;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 

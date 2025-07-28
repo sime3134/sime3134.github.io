@@ -194,6 +194,13 @@ const displayModal = (projectId) => {
   project.tech.forEach((tech) => {
     const chip = document.createElement("div");
     chip.classList.add("chip");
+    const colorClass =
+      tech
+        .toLowerCase()
+        .replace(/\s/g, "")
+        .replace(".", "")
+        .replace("#", "sharp") + "-color";
+    chip.classList.add(colorClass);
     chip.textContent = tech;
     chips.appendChild(chip);
   });
