@@ -213,8 +213,8 @@ a:hover {
   font-size: 4em;
   margin-bottom: 20px;
   cursor: pointer;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 .material-symbols-outlined.close-icon {
