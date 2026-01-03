@@ -5,35 +5,35 @@
    <!-- Main/Home Page -->
    <url>
       <loc>https://simonjern.com/</loc>
-      <lastmod>2025-07-12</lastmod> <!-- Adjust based on your update frequency -->
+      <lastmod>2026-01-02</lastmod> <!-- Adjust based on your update frequency -->
       <changefreq>yearly</changefreq>
       <priority>1.0</priority>
    </url>
    <!-- About Section -->
    <url>
       <loc>https://simonjern.com/?about</loc>
-      <lastmod>2025-07-12</lastmod>
+      <lastmod>2026-01-02</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.8</priority>
    </url>
    <!-- Projects Section -->
    <url>
       <loc>https://simonjern.com/?projects</loc>
-      <lastmod>2025-07-12</lastmod>
+      <lastmod>2026-01-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
    </url>
    <!-- Contact Section -->
    <url>
       <loc>https://simonjern.com/?contact</loc>
-      <lastmod>2025-07-12</lastmod>
+      <lastmod>2026-01-02</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.7</priority>
    </url>
    <!-- Services Section -->
    <url>
       <loc>https://simonjern.com/?freelance</loc>
-      <lastmod>2025-07-12</lastmod>
+      <lastmod>2026-01-02</lastmod>
       <changefreq>yearly</changefreq>
       <priority>0.8</priority>
    </url>
